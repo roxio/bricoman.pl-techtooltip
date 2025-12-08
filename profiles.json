@@ -1,0 +1,34 @@
+{
+    "FARBY \/ IMPREGNATY": [
+        "Czas ca\u0142kowitego schni\u0119cia (w h) :",
+        "Czas schni\u0119cia mi\u0119dzy 2 warstwami (w h) :",
+        "Dodatkowe informacje :",
+        "EAN :",
+        "Ilo\u015b\u0107 zawarta (pojemno\u015b\u0107) :",
+        "Kolor :",
+        "Odporno\u015b\u0107 na szorowanie :",
+        "Pojemno\u015b\u0107 (w l) :",
+        "Przeznaczenie :",
+        "Rodzina kolor\u00f3w :",
+        "Stopie\u0144 po\u0142ysku :",
+        "Typ \u017cywicy :",
+        "Wydajno\u015b\u0107 (m\u00b2\/L) :"
+    ],
+    "P\u0141YTKI": [
+        "EAN :",
+        "Grubo\u015b\u0107 (w mm) :",
+        "Ilo\u015b\u0107 produkt\u00f3w na palecie :",
+        "Ilo\u015b\u0107 p\u0142ytek w paczce :",
+        "Kraw\u0119dzie :",
+        "Materia\u0142 g\u0142\u00f3wny w ca\u0142kowitej masie produktu :",
+        "Produkt w opakowaniu: waga (w kg) :",
+        "Przeznaczenie :",
+        "Przeznaczenie p\u0142ytek :",
+        "Stopie\u0144 po\u0142ysku :",
+        "Typ efektu :",
+        "Typ produktu :",
+        "Waga transport [kg] :",
+        "Wyko\u0144czenie produktu :",
+        "Zawarto\u015b\u0107 opakowania (w m\u00b2) :"
+    ]
+}
