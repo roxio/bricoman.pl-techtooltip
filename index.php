@@ -514,16 +514,16 @@ class BricomanProductScraper {
                 break;
             case 'a6':
                 $page_orientation = 'portrait'; 
-                $card_width = 'calc(50% - 2.5mm)';
-                $card_height = 'calc(50% - 2.5mm)';
+                $card_width = 'calc(50% - 1.0mm)';
+                $card_height = 'calc(50% - 1.0mm)';
                 $items_per_page = 4;
                 $base_font_size = '8pt'; 
                 break;
             case 'a5':
             default:
                 $page_orientation = 'landscape';
-                $card_width = 'calc(50% - 2.5mm)';
-                $card_height = 'calc(100% - 2mm)';
+                $card_width = 'calc(50% - 1.0mm)';
+                $card_height = 'calc(100% - 1mm)';
                 $items_per_page = 2;
                 $base_font_size = '11pt';
                 break;
@@ -537,13 +537,13 @@ class BricomanProductScraper {
     <style>
         @page { size: A4 ' . $page_orientation . '; margin: 0; }
         body { 
-            width: 297mm; height: 210mm; margin: 0; padding: 5mm; 
+            width: 297mm; height: 210mm; margin: 0; padding: 2mm; 
             font-family: Arial, sans-serif; 
             box-sizing: border-box; 
         }
         ' . ($page_orientation == 'portrait' ? 'body { width: 210mm; height: 297mm; }' : '') . '
 
-        .page { width: 100%; height: 100%; display: flex; flex-wrap: wrap; gap: 5mm; align-content: flex-start; }
+        .page { width: 100%; height: 100%; display: flex; flex-wrap: wrap; gap: 2mm; align-content: flex-start; }
         
         .product-card { 
             width: ' . $card_width . '; 
@@ -639,7 +639,7 @@ class BricomanProductScraper {
 
         .table_product_data { border-collapse: collapse; width: 100%; font-size: 0.85em; }
         .table_product_data td { border: 1px solid #6c6c6c; padding: 0.2em; }
-        .title_data { width: 40%; font-weight: bold; background-color: #f2f2f2; }
+        .title_data { width: 40%; font-weight: bold; background-color: #f0f0f0; }
         
         .print-info { 
             position: absolute; bottom: 2mm; right: 2mm; 
@@ -716,7 +716,7 @@ class BricomanProductScraper {
                 $html .= '<table class="table_product_data">
                     <tr style="background-color: #6c6c6c;"><td colspan="2" style="height: 1px; padding:0;"></td></tr>';
                 foreach ($filtered_attributes as $idx => $attr) {
-                    $bg = ($idx % 2 == 0) ? '#ffffff' : '#f2f2f2';
+                    $bg = ($idx % 2 == 0) ? '#ffffff' : '#f0f0f0';
                     $html .= '<tr style="background-color: ' . $bg . ';">
                         <td class="title_data">' . $attr['label'] . '</td>
                         <td>' . $attr['value'] . '</td>
@@ -874,7 +874,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 $recent = $scraper->getRecentFiles();
 $profiles = $profileManager->getProfiles();
 ?>
-
+<?php include '../log.php'; ?>
 <!DOCTYPE html>
 <html lang="pl">
 <head>
